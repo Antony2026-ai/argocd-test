@@ -9,4 +9,4 @@ images:
   newTag: "28"
 - name: kreajith2026/argocd-1
   newName: kreajith2026/argocd-1
-  newTag: "4"
+  newTag: "5"
