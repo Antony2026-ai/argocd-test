@@ -15,10 +15,10 @@ spec:
         app: my-python-app
     spec:
       containers:
-      - name: my-python-app
-        image: kreajith2026/argocd:22
-        ports:
-        - containerPort: 5000
+        - name: my-python-app
+          image: kreajith2026/argocd:28
+          ports:
+            - containerPort: 5000
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -37,7 +37,7 @@ spec:
         app: my-java-app
     spec:
       containers:
-      - name: my-java-app
-        image: kreajith2026/argocd:22
-        ports:
-        - containerPort: 7000
+        - name: my-java-app
+          image: kreajith2026/argocd:22
+          ports:
+            - containerPort: 7000
