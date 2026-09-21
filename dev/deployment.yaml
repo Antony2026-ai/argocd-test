@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: my-python-app
-        image: kreajith2026/argocd:20
+        image: kreajith2026/argocd:21
         ports:
         - containerPort: 5000
