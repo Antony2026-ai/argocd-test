@@ -19,9 +19,7 @@ spec:
         image: kreajith2026/argocd:20
         ports:
         - containerPort: 5000
-        
------------------------
-
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
