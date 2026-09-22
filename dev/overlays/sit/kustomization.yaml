@@ -11,6 +11,7 @@ resources:
 
 images:
 - name: kreajith2026/trip-sit
-  newTag: "14"
+  newName: kreajith2026/trip-sit
+  newTag: "15"
 - name: kreajith2026/vts-sit
   newTag: "16"
