@@ -27,7 +27,7 @@ patches:
 images:
 - name: kreajith2026/trip-main
   newName: kreajith2026/trip-main
-  newTag: "37"
+  newTag: "5"
 - name: kreajith2026/vts-main
   newName: kreajith2026/vts-main
   newTag: "15"
