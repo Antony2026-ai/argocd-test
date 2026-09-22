@@ -6,7 +6,8 @@ resources:
 
 images:
 - name: kreajith2026/trip-main
-  newTag: "29"
+  newName: kreajith2026/trip-main
+  newTag: "33"
 - name: kreajith2026/trip-sit
   newTag: "32"
 - name: kreajith2026/vts-main
