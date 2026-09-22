@@ -7,23 +7,10 @@ kind: Kustomization
 resources:
 - ../../base
 
-# Remove the MAIN deployments from the SIT overlay
-patches:
-- patch: |
-    $patch: delete
-    apiVersion: apps/v1
-    kind: Deployment
-    metadata:
-      name: trip-deployment-main
-- patch: |
-    $patch: delete
-    apiVersion: apps/v1
-    kind: Deployment
-    metadata:
-      name: vts-deployment-main
+
 images:
 - name: kreajith2026/trip-sit
-  newName: kreajith2026/trip-sit
+  
   newTag: "18"
 - name: kreajith2026/vts-sit
   newTag: "16"
