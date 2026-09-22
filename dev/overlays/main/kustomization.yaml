@@ -1,33 +1,35 @@
+# =========================================================
+# FILE: dev/overlays/main/kustomization.yaml
+# =========================================================
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- ../../base
+  - ../../base
 
+# Remove the SIT deployments from the MAIN overlay
 patches:
-- patch: |
-    $patch: delete
-    apiVersion: apps/v1
-    kind: Deployment
-    metadata:
-      name: trip-deployment-main
-  target:
-    kind: Deployment
-    name: trip-deployment-main
-- patch: |
-    $patch: delete
-    apiVersion: apps/v1
-    kind: Deployment
-    metadata:
-      name: vts-deployment-main
-  target:
-    kind: Deployment
-    name: vts-deployment-main
+  - target:
+      kind: Deployment
+      name: trip-deployment-sit
+    patch: |
+      $patch: delete
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: trip-deployment-sit
+  - target:
+      kind: Deployment
+      name: vts-deployment-sit
+    patch: |
+      $patch: delete
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: vts-deployment-sit
 
 images:
-- name: kreajith2026/trip-main
-  newName: kreajith2026/trip-main
-  newTag: "5"
-- name: kreajith2026/vts-main
-  newName: kreajith2026/vts-main
-  newTag: "15"
+  - name: kreajith2026/trip-main
+    newTag: "5"
+  - name: kreajith2026/vts-main
+    newTag: "15"
