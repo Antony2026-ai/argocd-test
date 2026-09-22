@@ -7,22 +7,22 @@ resources:
 patches:
 - target:
     kind: Deployment
-    name: trip-deployment-main
+    name: trip-deployment-sit
   patch: |
     $patch: delete
     apiVersion: apps/v1
     kind: Deployment
     metadata:
-      name: trip-deployment-main
+      name: trip-deployment-sit
 - target:
     kind: Deployment
-    name: vts-deployment-main
+    name: vts-deployment-sit
   patch: |
     $patch: delete
     apiVersion: apps/v1
     kind: Deployment
     metadata:
-      name: vts-deployment-main
+      name: vts-deployment-sit
 
 images:
 - name: kreajith2026/trip-sit
