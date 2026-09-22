@@ -11,6 +11,7 @@ resources:
 
 images:
 - name: kreajith2026/trip-main
-  newTag: "19"
+  newName: kreajith2026/trip-main
+  newTag: "20"
 - name: kreajith2026/vts-main
   newTag: "15"
