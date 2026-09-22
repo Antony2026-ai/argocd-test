@@ -8,10 +8,8 @@ images:
 - name: kreajith2026/trip-main
   newTag: "29"
 - name: kreajith2026/trip-sit
-  newName: kreajith2026/trip-sit
   newTag: "32"
 - name: kreajith2026/vts-main
-  newName: kreajith2026/vts-main
   newTag: "12"
 - name: kreajith2026/vts-sit
   newTag: "3"
