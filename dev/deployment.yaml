@@ -1,31 +1,34 @@
+# ---------- MAIN namespace ----------
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-python-app
+  name: trip-deployment-main
+  namespace: main
   labels:
-    app: my-python-app
+    app: trip-deployment-main
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: my-python-app
+      app: trip-deployment-main
   template:
     metadata:
       labels:
-        app: my-python-app
+        app: trip-deployment-main
     spec:
       containers:
-        - name: my-python-app
-          image: kreajith2026/argocd:29
+        - name: trip-deployment-main
+          image: kreajith2026/trip-main:29
           ports:
             - containerPort: 5000
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-java-app
+  name: vts-deployment-main
+  namespace: main
   labels:
-    app: my-java-app
+    app: vts-deployment-main
 spec:
   replicas: 2
   selector:
@@ -38,6 +41,53 @@ spec:
     spec:
       containers:
         - name: my-java-app
-          image: kreajith2026/argocd-1:2
+          image: kreajith2026/vts-main:14
+          ports:
+            - containerPort: 7000
+---
+# ---------- SIT namespace ----------
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trip-deployment-sit
+  namespace: sit
+  labels:
+    app: vts-deployment-main
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vts-deployment-main
+  template:
+    metadata:
+      labels:
+        app: vts-deployment-main
+    spec:
+      containers:
+        - name: vts-deployment-main
+          image: kreajith2026/trip-sit:32
+          ports:
+            - containerPort: 5000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vts-deployment-sit
+  namespace: sit
+  labels:
+    app: vts-deployment-sit
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vts-deployment-sit
+  template:
+    metadata:
+      labels:
+        app: vts-deployment-sit
+    spec:
+      containers:
+        - name: vts-deployment-sit
+          image: kreajith2026/vts-sit:3
           ports:
             - containerPort: 7000
