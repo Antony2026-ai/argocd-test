@@ -24,6 +24,6 @@ patches:
 images:
 - name: kreajith2026/trip-sit
   newName: kreajith2026/trip-sit
-  newTag: "15"
+  newTag: "18"
 - name: kreajith2026/vts-sit
   newTag: "16"
