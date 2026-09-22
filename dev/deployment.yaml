@@ -33,14 +33,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-java-app
+      app: vts-deployment-main
   template:
     metadata:
       labels:
-        app: my-java-app
+        app: vts-deployment-main
     spec:
       containers:
-        - name: my-java-app
+        - name: vts-deployment-main
           image: kreajith2026/vts-main:14
           ports:
             - containerPort: 7000
@@ -52,19 +52,19 @@ metadata:
   name: trip-deployment-sit
   namespace: sit
   labels:
-    app: vts-deployment-main
+    app: trip-deployment-sit
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: vts-deployment-main
+      app: trip-deployment-sit
   template:
     metadata:
       labels:
-        app: vts-deployment-main
+        app: trip-deployment-sit
     spec:
       containers:
-        - name: vts-deployment-main
+        - name: trip-deployment-sit
           image: kreajith2026/trip-sit:32
           ports:
             - containerPort: 5000
