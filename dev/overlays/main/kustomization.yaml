@@ -1,17 +1,27 @@
-# =========================================================
-# FILE: dev/overlays/main/kustomization.yaml
-# =========================================================
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
 - ../../base
 
-
+patches:
+- patch: |
+    $patch: delete
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: trip-deployment-sit
+      namespace: sit
+- patch: |
+    $patch: delete
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: vts-deployment-sit
+      namespace: sit
 
 images:
 - name: kreajith2026/trip-main
-  newName: kreajith2026/trip-main
   newTag: "20"
 - name: kreajith2026/vts-main
   newTag: "15"
