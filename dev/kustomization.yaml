@@ -6,7 +6,8 @@ resources:
 
 images:
 - name: kreajith2026/argocd
-  newTag: "28"
+  newName: kreajith2026/argocd
+  newTag: "31"
 - name: kreajith2026/argocd-1
   newName: kreajith2026/argocd-1
   newTag: "9"
