@@ -5,6 +5,7 @@ resources:
 - ../../base
 images:
 - name: kreajith2026/trip-sit
-  newTag: "32"
+  newName: kreajith2026/trip-sit
+  newTag: "35"
 - name: kreajith2026/vts-sit
   newTag: "3"
