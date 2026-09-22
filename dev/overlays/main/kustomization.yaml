@@ -10,19 +10,19 @@ patches:
     apiVersion: apps/v1
     kind: Deployment
     metadata:
-      name: trip-deployment-sit
+      name: trip-deployment-main
   target:
     kind: Deployment
-    name: trip-deployment-sit
+    name: trip-deployment-main
 - patch: |
     $patch: delete
     apiVersion: apps/v1
     kind: Deployment
     metadata:
-      name: vts-deployment-sit
+      name: vts-deployment-main
   target:
     kind: Deployment
-    name: vts-deployment-sit
+    name: vts-deployment-main
 
 images:
 - name: kreajith2026/trip-main
