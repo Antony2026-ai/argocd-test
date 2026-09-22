@@ -11,6 +11,6 @@ images:
   newTag: "32"
 - name: kreajith2026/vts-main
   newName: kreajith2026/vts-main
-  newTag: "13"
+  newTag: "14"
 - name: kreajith2026/vts-sit
   newTag: "3"
